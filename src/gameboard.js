@@ -1,11 +1,13 @@
 export default function gameboard() {
   const container = document.createElement('div')
   container.classList.add('gameboard')
+  container.dataset.knight = false
   for(let i = 0; i < 8; i++) {
     const row = document.createElement('div')
     row.classList.add(`row:${i}`)
     for(let j = 0; j < 8; j++) {
       const cell= document.createElement('div')
+      cell.classList.add('cell')
       if(i%2 === 0) {
         if(j%2 === 0) {
           cell.classList.add('white')
