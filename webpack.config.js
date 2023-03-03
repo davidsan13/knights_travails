@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     app: './src/app.js',
-    knights: './src/knights.js',
+    knights: './src/path.js',
   },
   devtool: 'inline-source-map',
   devServer: {

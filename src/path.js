@@ -11,7 +11,7 @@ class Node {
   }
 }
 
-function knightSP(start, target) {
+export default function knightSP(start, target) {
   const queue = [];
   const [targetRow, targetCol] = target
   const startNode = new Node(start[0], start[1], 0, null)
@@ -62,15 +62,6 @@ const directions = [
   [1,-2],
   [2,-1]
 ]
-function board() {
-  let array = []
-  for(let i = 0; i < 8; i++) {
-    for(let j = 0; j < 8; j++) {
-      array.push([i,j])
-    }
-  }
-  return array
-}
 
 function getNeighbors(row, col) {
   const moves = []
@@ -86,6 +77,3 @@ function getNeighbors(row, col) {
 }
 
 
-const cell = [0,0]
-const target = [3,3]
-const moves = knightSP(cell, target)

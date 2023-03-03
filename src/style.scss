@@ -60,7 +60,7 @@ html {
 .wrapper {
   height: 100vh;
   display: grid;
-  grid-template-columns: (1fr 5rem);
+  grid-template-columns: (1fr 2fr);
   align-items: center;
   justify-items: center;
   gap: 2rem;
@@ -74,11 +74,16 @@ html {
   & > div {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    .knight{ 
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .knight {
     height: 1rem;
     width: 1rem;
+   
   }
 }
 .black {
