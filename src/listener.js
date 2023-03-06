@@ -14,6 +14,9 @@ export default function listener() {
 
 }
 
+function startTravail() {
+  const startBtn = document.querySelector('.start')
+}
 function knightSv() {
   sv()
 }

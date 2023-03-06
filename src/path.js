@@ -23,9 +23,8 @@ export default function knightSP(start, target) {
     const node = queue.shift();
     const {row, col, distanceFromStartPosition} = node
     if (row === targetRow && col === targetCol) {
-      // console.log(node)
       const paths = path(node)
-      return printPath(paths)
+      return paths
     }
     visited.add(node.getPositionString());
     for (const neighbor of getNeighbors(row, col)) {
@@ -72,7 +71,7 @@ function getNeighbors(row, col) {
 
     moves.push([neighborRow, neighborCol])
   })
-  // console.log(moves)
+
   return moves
 }
 

@@ -2,7 +2,9 @@ import { gameboard }from "./gameboard";
 import menu from "./menu";
 import knightsSVG from "./svg";
 import listener from "./listener";
-import getPath from "./controller";
+
+import knightSP from "./path";
+import { Controller } from "./controller";
 import './style.css';
 
 function component() {
@@ -15,6 +17,7 @@ function component() {
 
   document.body.appendChild(wrapper)
   listener()
+  Controller().startTravail()
   return wrapper
 }
 

@@ -30,17 +30,18 @@ function gameboard() {
 function getStart() {
   const knight = document.querySelector('.knight')
   const parentNode = knight.parentNode
-  const y = parentNode.dataset.row
-  const x = parentNode.dataset.column
+  const y = parseInt(parentNode.dataset.row, 10)
+  const x = parseInt(parentNode.dataset.column, 10)
   const start = [y,x]
   return start
 }
 
 function getEnd() {
-  const end = document.querySelector('.endLoc')
-  const y = end.dataset.row
-  const x = end.dataset.column
+  const end = document.querySelector('[data-end-loc')
+  const y = parseInt(end.dataset.row, 10)
+  const x = parseInt(end.dataset.column, 10)
   const endLoc = [y,x]
+ 
   return endLoc
 }
 
