@@ -36,6 +36,12 @@ function getStart() {
   return start
 }
 
+function getKnight() {
+  const knight = document.querySelector('.knight')
+  console.log(knight)
+  return knight
+}
+
 function getEnd() {
   const end = document.querySelector('[data-end-loc')
   const y = parseInt(end.dataset.row, 10)
@@ -45,4 +51,7 @@ function getEnd() {
   return endLoc
 }
 
-export { gameboard, getStart, getEnd }
+function getDataCell(x,y) {
+  return document.querySelector(`[data-row="${x}"][data-column="${y}"]`);
+}
+export { gameboard, getStart, getEnd, getKnight, getDataCell}

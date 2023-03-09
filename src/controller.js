@@ -19,6 +19,7 @@ export const Controller = () => {
     const end = getEnd()
     console.log(start, end)
     const path = knightSP(start, end)
+    animatePath(path)
     
     return path
   }
